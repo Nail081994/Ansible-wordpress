@@ -1,0 +1,46 @@
+---
+
+- name: Install required packages
+  apt:
+          pkg:
+                  - curl
+                  - gnupg
+                  - xz-utils
+                  - python3-mysqldb
+          state: latest
+          update_cache: true
+
+- name: Download MySQL deb
+  get_url:
+          url: "https://dev.mysql.com/get/{{  mysql_version  }}"
+          dest: /tmp
+
+
+- name: Install MySQL deb
+  apt:
+          deb: "/tmp/{{  mysql_version  }}"
+          state: present
+          update_cache: true
+
+- name: Install MySQL-server
+  apt:
+          name: mysql-server
+          state: latest
+          update_cache: true
+
+- name: Creating MySQL user
+  mysql_user:
+          name: "{{  db_user  }}"
+          password: "{{  db_password  }}"
+          priv: "{{  db_user_priv  }}"
+          host: "{{  db_host  }}"
+          state: present
+
+- name: Creating MySQL database
+  mysql_db:
+          name: "{{  db_name  }}"
+          state: present
+
+
+
+

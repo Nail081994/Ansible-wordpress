@@ -1,0 +1,17 @@
+---
+# tasks file for ansible-wordpess
+
+- name: Create user with sudo privileges
+  include_tasks: create-user.yml
+
+- name: Install MySQL
+  include_tasks: install-mysql.yml
+
+- name: Install PHP
+  include_tasks: install-php.yml
+
+- name: Install Nginx
+  include_tasks: install-nginx.yml
+
+- name: Install Wordpress
+  include_tasks: install-wordpress.yml
