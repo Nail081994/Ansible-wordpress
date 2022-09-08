@@ -1,0 +1,21 @@
+---
+
+- name: Creating user
+  user:
+          name: "{{  user  }}"
+          shell: /bin/bash
+          groups: "{{  group  }}"
+          append: yes
+          state: present
+
+- name: Allow user to use sudo without a password
+  lineinfile:
+          dest: /etc/sudoers
+          line: '{{  user  }} ALL=(ALL) NOPASSWD: ALL'
+          validate: 'visudo -cf %s'
+
+- name: Set authorized key for user ubuntu copying it from current user
+  ansible.posix.authorized_key:
+    user: "{{  user  }}"
+    state: present
+    key: "{{ lookup('file', lookup('env','HOME') + '/.ssh/id_rsa.pub') }}"
