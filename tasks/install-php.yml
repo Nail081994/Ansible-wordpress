@@ -20,7 +20,7 @@
 
 - name: Install php-fpm
   apt:
-          name: php-fpm
+          name: "{{  php-fpm_version  }}"
           state: latest
           update_cache: true
 
@@ -34,6 +34,6 @@
   systemd:
           state: restarted
           daemon_reload: yes
-          name: php7.3-fpm
+          name: "{{  php-fpm_version  }}"
 
 

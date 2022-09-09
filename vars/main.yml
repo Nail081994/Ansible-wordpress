@@ -29,10 +29,10 @@ user: "wordpressuser"
 group: "sudo"
 
 # Your site ip-address or domain name
-your_domain: ""
+your_domain: "141.8.199.177"
 
 # Version of PHP that you want to install
-php-fpm_version: "php7.3-fpm"
+php-fpm_version: "php7.4-fpm"
 
 # Wordress release version
 wordpress_version: "wordpress-6.0.1.tar.gz"
