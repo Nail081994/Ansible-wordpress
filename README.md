@@ -1,44 +1,47 @@
-<<<<<<< HEAD
-Role Name
+Ansible-Wordpress Role
 =========
 
-A brief description of the role goes here.
+This role install and configure Wordpress CMS to your Ubuntu server.
 
 Requirements
 ------------
 
-Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here. For instance, if the role uses the EC2 module, it may be a good idea to mention in this section that the boto package is required.
+Prepared and configured Linux server with the following installed soft:
+- Nginx
+- MySQL
+- PHP
+- Ansible 2.7 or higher (on local machine which will execute Ansible playbooks)
+
+
+See some topics for this such as: 
+
+- https://www.digitalocean.com/community/tutorials/how-to-install-linux-nginx-mysql-php-lemp-stack-on-ubuntu-20-04
+
+- https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-ansible-on-ubuntu-20-04
 
 Role Variables
 --------------
-
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
-
-Dependencies
-------------
-
-A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.
-
+ - `mysql_version` # Version of MySQL to be installed thought the playing this Ansible role 
+ - `db_user` # Name of Wordpress database owner-user
+ - `db_name` # Name of database for Wordpress
+ - `db_password` # Password of database
+ - `db_host` # Database host
+ - `db_user_priv` # Privileges that you will grant to your database user
+ - `nginx_version` # Nginx (Web-server) version to be installed thought the playing this Ansible role
+ - `user` # Name of remote user that you want to create
+ - `group` # Group for created remote user
+ - `your_domain` # Your site ip-address or domain name
+ - `php-fpm_version` # Version of PHP that you want to install
+ - `wordpress_version` # Wordress release version
+ 
 Example Playbook
 ----------------
 
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
-
+```yaml
     - hosts: servers
+      become: yes
+      vars_file:
+        - vars/main.yml
       roles:
-         - { role: username.rolename, x: 42 }
-
-License
--------
-
-BSD
-
-Author Information
-------------------
-
-An optional section for the role authors to include contact information, or a website (HTML is not allowed).
-=======
-# ansible-wordpress
-
-### Install Wordpress on your machine with simple role. This role relevant for Debian distribution. 
->>>>>>> 93d4a6ab0871c7643062f292c69e4819c4d56591
+         - { role: ansible-wordpress }
+```
