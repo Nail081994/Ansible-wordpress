@@ -1,7 +1,7 @@
 Ansible-Wordpress Role
 =========
 
-This role install and configure Wordpress CMS to your server.
+This role install and configure Wordpress CMS to your Ubuntu server.
 
 Requirements
 ------------
