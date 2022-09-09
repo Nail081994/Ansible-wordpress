@@ -12,7 +12,10 @@ Prepared and configured Linux server with the following installed soft:
 - PHP
 - Ansible 2.7 or higher
 
-See some links such as: (https://www.digitalocean.com/community/tutorials/how-to-install-linux-nginx-mysql-php-lemp-stack-on-ubuntu-20-04)
+
+See some links such as: 
+https://www.digitalocean.com/community/tutorials/how-to-install-linux-nginx-mysql-php-lemp-stack-on-ubuntu-20-04
+https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-ansible-on-ubuntu-20-04
 
 Role Variables
 --------------
