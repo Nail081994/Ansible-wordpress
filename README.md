@@ -26,6 +26,7 @@ Role Variables
  - your_domain # Your site ip-address or domain name
  - php-fpm_version # Version of PHP that you want to install
  - wordpress_version # Wordress release version
+ 
 Dependencies
 ------------
 
