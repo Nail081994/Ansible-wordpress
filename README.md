@@ -6,11 +6,13 @@ This role install and configure Wordpress CMS to your server.
 Requirements
 ------------
 
-Installed and configured Linux server with the following installed soft:
+Prepared and configured Linux server with the following installed soft:
 - Nginx
 - MySQL
 - PHP
 - Ansible 2.7 or higher
+
+See some links such as: (https://www.digitalocean.com/community/tutorials/how-to-install-linux-nginx-mysql-php-lemp-stack-on-ubuntu-20-04)
 
 Role Variables
 --------------
