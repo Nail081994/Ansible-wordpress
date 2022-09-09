@@ -7,10 +7,10 @@ Requirements
 ------------
 
 Installed and configured Linux server with the following installed soft:
-- nginx
-- mysql
-- php
-
+- Nginx
+- MySQL
+- PHP
+- Ansible 2.7 or higher
 Role Variables
 --------------
 
