@@ -11,6 +11,7 @@ Installed and configured Linux server with the following installed soft:
 - MySQL
 - PHP
 - Ansible 2.7 or higher
+
 Role Variables
 --------------
  - mysql_version # Version of MySQL to be installed thought the playing this Ansible role
