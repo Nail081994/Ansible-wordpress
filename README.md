@@ -14,7 +14,7 @@ Installed and configured Linux server with the following installed soft:
 
 Role Variables
 --------------
- - mysql_version - Version of MySQL to be installed thought the playing this Ansible role   ackage_name - Since G 
+ - (mysql_version) - Version of MySQL to be installed thought the playing this Ansible role   ackage_name - Since G 
  - db_user # Name of Wordpress database owner-user
  - db_name # Name of database for Wordpress
  - db_password # Password of database
