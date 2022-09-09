@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 Role Name
 =========
 
@@ -38,7 +37,3 @@ Author Information
 
 An optional section for the role authors to include contact information, or a website (HTML is not allowed).
 =======
-# ansible-wordpress
-
-### Install Wordpress on your machine with simple role. This role relevant for Debian distribution. 
->>>>>>> 93d4a6ab0871c7643062f292c69e4819c4d56591
