@@ -10,7 +10,7 @@ Prepared and configured Linux server with the following installed soft:
 - Nginx
 - MySQL
 - PHP
-- Ansible 2.7 or higher
+- Ansible 2.7 or higher (on local machine which will execute Ansible playbooks)
 
 
 See some topics for this such as: 
