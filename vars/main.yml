@@ -29,7 +29,7 @@ user: "wordpressuser"
 group: "sudo"
 
 # Your site ip-address or domain name
-your_domain: "141.8.199.177"
+your_domain: "your_ip_address"
 
 # Version of PHP that you want to install
 php-fpm_version: "php7.4-fpm"
